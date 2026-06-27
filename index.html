@@ -8,6 +8,9 @@
 </head>
 <body>
 
+  <!-- ═══════════════════════════════════════════════
+       HEADER
+  ════════════════════════════════════════════════ -->
   <header class="site-header">
     <div class="header-inner">
       <div class="logo-block">
@@ -30,6 +33,9 @@
     </div>
   </header>
 
+  <!-- ═══════════════════════════════════════════════
+       SECCIÓN: CONFIGURACIÓN DE PARTIDA
+  ════════════════════════════════════════════════ -->
   <section id="section-setup" class="section active">
     <div class="container">
       <div class="section-hero">
@@ -37,8 +43,10 @@
         <p class="hero-sub">El asistente analizará todas las variables y te dará la composición óptima de torres.</p>
       </div>
 
+      <!-- Configuración general -->
       <div class="config-grid">
 
+        <!-- Modo de juego -->
         <div class="config-card">
           <h3 class="config-title">🎮 Modo de Juego</h3>
           <div class="toggle-group">
@@ -47,6 +55,7 @@
           </div>
         </div>
 
+        <!-- Fase -->
         <div class="config-card">
           <h3 class="config-title">⏱ Fase de Partida</h3>
           <div class="toggle-group">
@@ -56,6 +65,7 @@
           </div>
         </div>
 
+        <!-- Boss -->
         <div class="config-card">
           <h3 class="config-title">💀 Boss</h3>
           <div class="toggle-group">
@@ -63,6 +73,8 @@
             <button class="toggle-btn active" data-group="boss" data-value="no">No</button>
           </div>
         </div>
+
+        <!-- Voladores -->
         <div class="config-card">
           <h3 class="config-title">🦅 Voladores</h3>
           <div class="toggle-group">
@@ -71,11 +83,13 @@
           </div>
         </div>
 
+        <!-- Mapa -->
         <div class="config-card">
           <h3 class="config-title">🗺 Mapa</h3>
           <input type="text" id="mapName" class="text-input" placeholder="Ej: Isla Volcánica, Desierto..." />
         </div>
 
+        <!-- Dinero inicial -->
         <div class="config-card">
           <h3 class="config-title">💰 Dinero Inicial</h3>
           <input type="number" id="startMoney" class="text-input" placeholder="Ej: 500" value="500" min="0" />
@@ -83,6 +97,7 @@
 
       </div>
 
+      <!-- Research -->
       <div class="research-card">
         <h3 class="config-title">🔬 Nivel de Research</h3>
         <div class="slider-row">
@@ -93,20 +108,25 @@
         </div>
       </div>
 
+      <!-- Pesos personalizados -->
       <div class="weights-card">
         <h3 class="config-title">⚖ Prioridades Personalizadas</h3>
         <p class="config-hint">Ajusta qué factores importan más en tu estilo de juego.</p>
         <div class="weights-grid" id="weightsGrid">
+          <!-- generado por JS -->
         </div>
       </div>
 
+      <!-- Selección de enemigos -->
       <div class="enemies-section">
         <h3 class="section-title-mid">👾 Enemigos Esperados</h3>
         <p class="config-hint">Selecciona qué enemigos aparecerán y en qué cantidad.</p>
         <div class="enemy-grid" id="enemyGrid">
+          <!-- generado por JS -->
         </div>
       </div>
 
+      <!-- Botón analizar -->
       <div class="analyze-block">
         <button class="analyze-btn" id="analyzeBtn">
           <span class="analyze-icon">⚡</span>
@@ -117,6 +137,9 @@
     </div>
   </section>
 
+  <!-- ═══════════════════════════════════════════════
+       SECCIÓN: RESULTADOS / TORRES
+  ════════════════════════════════════════════════ -->
   <section id="section-results" class="section">
     <div class="container">
       <div class="section-hero">
@@ -128,31 +151,38 @@
         </div>
       </div>
 
+      <!-- Advertencias automáticas -->
       <div class="warnings-block" id="warningsBlock"></div>
 
+      <!-- Top 10 torres -->
       <h3 class="section-title-mid">🏆 Top 10 Torres Recomendadas</h3>
       <div class="results-grid" id="resultsGrid"></div>
 
+      <!-- Plan de apertura -->
       <div class="plan-card" id="openingPlan">
         <h3 class="plan-title">🚀 Plan de Apertura (Early Game)</h3>
         <div class="plan-content" id="openingContent"></div>
       </div>
 
+      <!-- Mid Game -->
       <div class="plan-card" id="midPlan">
         <h3 class="plan-title">⚡ Transición Mid Game</h3>
         <div class="plan-content" id="midContent"></div>
       </div>
 
+      <!-- Late Game -->
       <div class="plan-card" id="latePlan">
         <h3 class="plan-title">💎 Composición Late Game</h3>
         <div class="plan-content" id="lateContent"></div>
       </div>
 
+      <!-- Sinergias -->
       <div class="plan-card" id="synergiesCard">
         <h3 class="plan-title">🔗 Sinergias Detectadas</h3>
         <div class="plan-content" id="synergiesContent"></div>
       </div>
 
+      <!-- Buscador -->
       <div class="search-bar-block">
         <h3 class="section-title-mid">🔍 Buscar Torre</h3>
         <input type="text" id="towerSearch" class="text-input" placeholder="Escribe el nombre de una torre..." />
@@ -162,6 +192,9 @@
     </div>
   </section>
 
+  <!-- ═══════════════════════════════════════════════
+       SECCIÓN: COMPARADOR
+  ════════════════════════════════════════════════ -->
   <section id="section-compare" class="section">
     <div class="container">
       <div class="section-hero">
@@ -184,6 +217,9 @@
     </div>
   </section>
 
+  <!-- ═══════════════════════════════════════════════
+       SECCIÓN: ESTADÍSTICAS
+  ════════════════════════════════════════════════ -->
   <section id="section-stats" class="section">
     <div class="container">
       <div class="section-hero">
@@ -202,6 +238,9 @@
     </div>
   </section>
 
+  <!-- ═══════════════════════════════════════════════
+       SECCIÓN: FAVORITOS
+  ════════════════════════════════════════════════ -->
   <section id="section-favorites" class="section">
     <div class="container">
       <div class="section-hero">
@@ -213,6 +252,9 @@
     </div>
   </section>
 
+  <!-- ═══════════════════════════════════════════════
+       SECCIÓN: HISTORIAL
+  ════════════════════════════════════════════════ -->
   <section id="section-history" class="section">
     <div class="container">
       <div class="section-hero">
@@ -225,6 +267,9 @@
     </div>
   </section>
 
+  <!-- ═══════════════════════════════════════════════
+       SECCIÓN: AYUDA
+  ════════════════════════════════════════════════ -->
   <section id="section-help" class="section">
     <div class="container">
       <div class="section-hero">
@@ -285,6 +330,7 @@
     </div>
   </section>
 
+  <!-- Toast de notificación -->
   <div class="toast" id="toast"></div>
 
   <script src="script.js"></script>
